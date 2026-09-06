@@ -84,10 +84,25 @@ target_include_directories(fzy PRIVATE
     "${CMAKE_SOURCE_DIR}/thirdparty/fzy/src"
 )
 
-target_include_directories(fzy PUBLIC
-    # Public consumer header root — consumers include <fzy/match.h>
-    "${FZY_INCLUDE_DIR}"
-)
-
 # --- No executable-only link dependencies -------------------------------------
 # fzy is a pure static library; no pthread or other executable-oriented flags.
+
+# --- Install and Export Interface --------------------------------------------
+include(GNUInstallDirs)
+
+target_include_directories(fzy PUBLIC
+    $<BUILD_INTERFACE:${FZY_INCLUDE_DIR}>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+)
+
+# Public header so consumers can #include <fzy/match.h>
+install(FILES "${FZY_INCLUDE_DIR}/fzy/match.h"
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/fzy)
+
+# Add fzy to the SAME export set as fzy_match so the installed
+# fzy_matchTargets.cmake can reference it.
+install(TARGETS fzy EXPORT fzy_matchTargets
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+    
