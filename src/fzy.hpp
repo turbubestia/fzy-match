@@ -4,7 +4,7 @@
 #include <vector>
 #include <utility>
 
-namespace turbubestia::settings::fzy {
+namespace turbubestia::fzy {
 
 constexpr double lowest_score_t = std::numeric_limits<double>::lowest();
 

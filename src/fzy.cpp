@@ -6,7 +6,7 @@
 #include <utility>
 #include <algorithm>
 
-namespace turbubestia::settings::fzy {
+namespace turbubestia::fzy {
 
 // ============================================================================
 // Single-target fzy matching functions (wrappers around fzy C API)

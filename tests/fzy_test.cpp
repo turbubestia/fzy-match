@@ -8,7 +8,7 @@
 #define SCORE_MAX INFINITY
 #define SCORE_MIN -INFINITY
 
-using namespace turbubestia::settings::fzy;
+using namespace turbubestia::fzy;
 
 int main(int argc, char *argv[]) {
     ::testing::InitGoogleTest(&argc, argv);
