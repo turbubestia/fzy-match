@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "fzy-match",
+  "version-string": "0.1.0",
+  "homepage": "https://github.com/turbubestia/fzy-match",
+  "description": "A C++ library wrapper of the popular fuzzy text selector for the terminal.",
+  "dependencies": [
+    "gtest"
+  ]
+}
