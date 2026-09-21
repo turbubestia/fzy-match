@@ -18,3 +18,5 @@ fzy_match_dep = declare_dependency(
   include_directories: fzy_match_inc,
   dependencies: fzy_dep # Forwards thirdparty fzy dependency automatically
 )
+
+meson.override_dependency('fzy_match', fzy_match_dep)

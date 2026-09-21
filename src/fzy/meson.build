@@ -27,4 +27,4 @@ fzy_dep = declare_dependency(
 )
 
 # Register for dependency('fzy') in main meson.build
-# meson.override_dependency('fzy', fzy_dep)
+meson.override_dependency('fzy', fzy_dep)
