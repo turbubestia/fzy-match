@@ -23,11 +23,6 @@
 *.dll
 *.so.*
 
-
-# Fortran module files
-*.mod
-*.smod
-
 # Compiled Static libraries
 *.lai
 *.la
@@ -42,7 +37,7 @@
 # Build directories
 build/
 Build/
-build-*/
+dist/
 
 # CMake generated files
 CMakeFiles/
@@ -71,15 +66,11 @@ Testing/
 # custom scripts
 launch-code.*
 
-# Ignore Meson build directories
-build/
-builddir/
-dist/
-
 # Ignore Meson wrap downloads and extract directories
 subprojects/*
 !subprojects/*.wrap
 !subprojects/packagefiles/
 
-# Ignore the wrap package cache directory
-subprojects/packagecache/
+# Ignore .vscode settings
+.vscode/*
+!.vscode/*.sample.json
