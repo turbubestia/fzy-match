@@ -1,0 +1,13 @@
+{
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/meson-debug/compile_commands.json",
+    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
+    "mesonbuild.buildFolder": "build/meson-debug",
+    "testMate.cpp.test.advancedExecutables": [
+        {
+            "pattern": "build/**/*_test.exe",
+            "env": {
+                "PATH": "${os_env:PATH}${osPathEnvSep}${workspaceFolder}/build/meson-debug/subprojects/googletest-1.17.0/googletest"
+            }
+        }
+    ]
+}

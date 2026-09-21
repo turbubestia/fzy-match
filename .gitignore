@@ -70,3 +70,15 @@ Testing/
 
 # custom scripts
 launch-code.*
+
+# Ignore Meson build directories
+build/
+builddir/
+
+# Ignore Meson wrap downloads and extract directories
+subprojects/*
+!subprojects/*.wrap
+!subprojects/packagefiles/
+
+# Ignore the wrap package cache directory
+subprojects/packagecache/
