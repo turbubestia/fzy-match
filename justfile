@@ -9,8 +9,8 @@ setup target="release":
 build target="release":
     meson compile -C build/meson-{{target}}
 
-test target="release":
-    meson test -C build/meson-{{target}}
+test target *args:
+    meson test -C build/meson-{{target}} {{args}}
 
 install target="release":
     meson install -C build/meson-{{target}} --destdir="$PWD/dist/{{target}}"
