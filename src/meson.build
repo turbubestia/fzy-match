@@ -6,9 +6,9 @@ fzy_match_inc = include_directories('.')
 
 # 2. Build the static library
 fzy_match_lib = static_library('fzy_match',
-  'fzy.cpp',
-  dependencies: fzy_dep,
+  sources: 'fzy.cpp',
   include_directories: fzy_match_inc,
+  dependencies: fzy_dep,
   install: true
 )
 

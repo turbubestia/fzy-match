@@ -74,6 +74,7 @@ launch-code.*
 # Ignore Meson build directories
 build/
 builddir/
+dist/
 
 # Ignore Meson wrap downloads and extract directories
 subprojects/*

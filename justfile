@@ -1,16 +1,19 @@
 [windows]
 set shell := ["powershell.exe", "-NoLogo", "-Command"]
 
-default: (build "debug")
+default: (build "release")
 
-setup target="debug":
+setup target="release":
 	meson setup --buildtype="{{target}}" build/meson-{{target}}
 
-build target="debug":
+build target="release":
     meson compile -C build/meson-{{target}}
 
-test target="debug":
+test target="release":
     meson test -C build/meson-{{target}}
 
-clean target="debug":
+install target="release":
+    meson install -C build/meson-{{target}} --destdir="$PWD/dist/{{target}}"
+
+clean target="release":
     rm -rf build/meson-{{target}}
